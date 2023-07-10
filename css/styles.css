@@ -6,6 +6,7 @@
   --slate: #434455;
   --ocean: #404bbf;
   --cloud: #f4f4fd;
+  --lightslate: #8e8f99;
 }
 
 p,
@@ -302,6 +303,48 @@ img {
 
 .member-description {
   text-align: center;
+}
+
+/*-----------------------CUSTOMERS----------------------*/
+.customers {
+  padding: 120px 0;
+}
+.customers-title {
+  color: var(--navyblue);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 72px;
+}
+.customers-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.customers-item {
+  flex-basis: calc((100% - 5 * 24px) / 6);
+  padding: 16px 32px;
+  border-radius: 4px;
+  border: 1px solid var(--lightslate, #8e8f99);
+}
+
+.customers-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-color: var(--navyblue);
+  /*  border-radius: 4px;
+  border: 1px solid var(--lightslate, #8e8f99); */
+}
+
+.customers-icon {
+  fill: var(--navyblue);
 }
 
 /*-----------------------FOOTER----------------------*/
