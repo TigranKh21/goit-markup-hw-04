@@ -7,25 +7,26 @@
   --ocean: #404bbf;
   --cloud: #f4f4fd;
   --lightslate: #8e8f99;
+  --dairy: #fcfcfc;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
-ul,
-ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
 
 body {
   color: #434455;
@@ -72,6 +73,23 @@ img {
   margin: 0 auto;
 }
 
+.current::after {
+  content: "";
+  display: block;
+  background-color: var(--ocean);
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.current {
+  display: inline-block;
+  
+}
+
+.active {
+  color: var(--ocean);
+}
 /*-----------------------HEADER----------------------*/
 
 .header {
@@ -503,4 +521,93 @@ img {
 
 .projects-subtitle {
   margin-bottom: 8px;
+}
+
+.project-image {
+  position: relative;
+  width: 360px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.project-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px 164px 32px;
+  background-color: var(--iris);
+  color: var(--cloud);
+  opacity: 90%;
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+a .project-image:hover .project-image-overlay{
+  transform: translateY(0);
+}
+
+/*-----------------------INEX-MODAL----------------------*/
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;  
+  top: 0;
+  /* left: 0; */
+  background-color: rgba(72, 67, 60, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+}
+
+.modal {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 408px;
+  min-height: 584px;
+  background-color: var(--dairy);
+  border-radius: 4px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-close-modal {
+  border: 1px solid var(--slate);
+  background-color: #e7e9fc;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: block;
+  margin-top: 24px;
+  margin-right: 24px;
+  position: relative;
+  cursor: pointer;
+  /*   justify-content: center;
+  align-items: center; */
+}
+
+.btn-close-modal:hover,
+.btn-close-modal:focus {
+  background-color: var(--iris);
+}
+
+.modal-icon-x {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+.btn-close-modal:hover .modal-icon-x,
+.btn-close-modal:focus .modal-icon-x {
+  fill: var(--cloud);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
