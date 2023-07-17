@@ -335,21 +335,33 @@ img {
   display: flex;
   flex-direction: row;
   gap: 24px;
+  justify-content: center;
 }
 
 .team-social-item {
-  display: block;
-  background-color: var(--iris);
   width: 40px;
   height: 40px;
+}
+
+.team-social-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--iris);
   border-radius: 50%;
-  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--ocean);
 }
 
 .social-icon {
   max-width: 100%;
   height: auto;
-  fill: #fff;
+  fill: var(--cloud)
 }
 
 .team-member {
